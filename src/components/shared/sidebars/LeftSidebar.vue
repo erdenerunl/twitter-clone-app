@@ -10,7 +10,7 @@
               <router-link active-class="active" class="nav-link" aria-current="page" to="/">Home</router-link>
             </li>
             <li class="nav-item">
-              <router-link active-class="active" class="nav-link" to="/">Keşfet</router-link>
+              <router-link active-class="active" class="nav-link" to="/about">Keşfet</router-link>
             </li>
             <li class="nav-item">
               <router-link active-class="active" class="nav-link" to="/">Bildirimler</router-link>
@@ -55,7 +55,7 @@ export default {};
     justify-content: center;
 }
 .container {
-  width: 275px;
+  width: 200px;
   position: fixed;
   background-color: aqua;
   top: 0;

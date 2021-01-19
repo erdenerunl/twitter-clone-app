@@ -1,18 +1,19 @@
 <template>
   <div class="container">
     <left-sidebar />
-    <transition name="fade">
-      <router-view></router-view>
-    </transition>
+    <router-view></router-view>
+    <right-sidebar />
   </div>
   
 </template>
 
 <script>
 import LeftSidebar from '@/components/shared/sidebars/LeftSidebar'
+import RightSidebar from '@/components/shared/sidebars/RightSidebar'
 export default {
   components : {
-    LeftSidebar
+    LeftSidebar,
+    RightSidebar
   }
 }
 </script>
