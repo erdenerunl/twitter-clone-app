@@ -2,10 +2,10 @@
   <div class="tweet-container-wrapper">
     <div class="user-info-details">
       <user-figure />
-      <user-info />
+      <user-info :tweet="tweet" />
     </div>
     <div class="tweet-container">
-      <tweet-container-item />
+      <tweet-container-item :tweet="tweet" />
     </div>
   </div>
 </template>
@@ -20,8 +20,20 @@ export default {
     UserInfo,
     TweetContainerItem,
   },
+  props:["tweet"],
+  watch:{
+      tweet(){
+          console.log(this.tweet)
+      }
+  }
 };
 </script>
+
+
+
+
+
+
 
 <style lang="scss">
 @import "@/assets/variable.scss";
@@ -31,17 +43,16 @@ export default {
   flex-direction: column;
   padding: 1rem 2rem;
   margin: 1rem;
-  background-color: aqua;
   border: 1px solid $border;
 
   .user-info-details {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .tweet-container{
-      margin: 1rem 0;
+  .tweet-container {
+    margin: 1rem 0;
   }
 }
 </style>

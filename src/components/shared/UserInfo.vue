@@ -1,10 +1,10 @@
 <template>
   <div class="user-info-wrapper">
       <custom-text class="small">
-          Erdener Ünal
+          {{ tweet.user }}
       </custom-text>
       <custom-text class="small text-muted">
-         3 hours ago
+         {{ tweet.created_at }}
       </custom-text>
 
   </div>
@@ -15,6 +15,9 @@ import CustomText from "@/components/CustomVariables/CustomText.vue";
 export default {
     components:{
         CustomText
+    },
+    props:{
+        tweet: "tweet"
     }
 };
 </script>
