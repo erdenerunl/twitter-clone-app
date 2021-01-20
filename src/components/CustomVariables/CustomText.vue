@@ -11,6 +11,7 @@ export default {
         tag:{
             type: String,
             default: "span"
+
         },
         size:{
             type: String,

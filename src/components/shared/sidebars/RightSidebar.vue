@@ -1,12 +1,10 @@
 <template>
-  <div class="wrapper">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  meraba
-              </div>
-          </div>
-      </div>
+  <div class="col-3">
+    <div class="wrapper">
+
+      right sidebar
+      
+  </div>
   </div>
 </template>
 
@@ -17,12 +15,12 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  width: 200px;
+.wrapper {
+  width: inherit;
   position: fixed;
-  background-color: aqua;
   top: 0;
   right: 0;
   height: 100vh;
+  background-color: green;
 }
 </style>
