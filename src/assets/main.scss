@@ -1,3 +1,5 @@
+@import "./variable.scss";
+
 *{
     margin:0;
     padding:0;
@@ -6,10 +8,20 @@
 }
 body{
     font-size: 16px;
+    color: $text-1;
 }
 a{
     text-decoration: none;
+    color: $text-1;
 }
 li{
     list-style: none;
+}
+
+
+// SHARED STYLES
+
+header{
+    font-size: 1.40rem;
+
 }

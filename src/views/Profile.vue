@@ -1,6 +1,8 @@
 <template>
   <div>
-    
+    <header>
+      Home Page
+    </header>
   </div>
 </template>
 
@@ -10,6 +12,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+header{
+  font-size: 1.25rem;
+  
+}
 
 </style>

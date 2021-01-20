@@ -1,11 +1,11 @@
 <template>
-  <div class="col-3">
+
     <div class="wrapper">
 
       right sidebar
       
   </div>
-  </div>
+
 </template>
 
 <script>
