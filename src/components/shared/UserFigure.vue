@@ -11,6 +11,10 @@ export default {
 </script>
 
 <style scoped>
+figure{
+    padding: .5rem .5rem;
+    margin: 0;
+}
 img{
     border-radius: 50%;
 }

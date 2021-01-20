@@ -19,6 +19,15 @@ li {
   list-style: none;
 }
 
+.btn-secondary {
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+}
+.btn-secondary:hover {
+  background-color: #c8c8c8;
+  border-color: #c8c8c8;
+}
+
 header {
   font-size: 1.4rem;
 }

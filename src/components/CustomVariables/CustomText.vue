@@ -31,7 +31,7 @@ export default {
     font-size:1rem;
 }
 .small{
-    font-size: 0.75rem;
+    font-size: 0.875rem;
 }
 .xsmall{
     font-size: 0.625rem;

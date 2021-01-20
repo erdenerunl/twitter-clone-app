@@ -17,7 +17,15 @@ a{
 li{
     list-style: none;
 }
+.btn-secondary{
+    background-color: $bg-light;
+    border-color: $bg-light;
 
+    &:hover{
+        background-color: $light-hover;
+        border-color: $light-hover;
+    }
+}
 
 // SHARED STYLES
 
