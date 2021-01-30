@@ -9,14 +9,14 @@
       </div>
     </div>
     <send-tweet-container />
-    <tweet-container :tweet="tweet" v-for="tweet in tweets"  :key="tweet.id" />
+    <tweet-container  :tweet="tweet" v-for="tweet in tweets" :key="tweet.id" />
   </div>
 </template>
 
 <script>
 import TweetContainer from "../components/TweetContainer.vue";
 import SendTweetContainer from "../components/SendTweetContainer.vue";
-import {mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 export default {
   components: {
     TweetContainer,
@@ -28,11 +28,6 @@ export default {
   computed:{
       ...mapGetters(["tweets"])
   },
-  watch:{
-    tweets(){
-      console.log(this.tweets)
-    }
-  }
 };
 </script>
 

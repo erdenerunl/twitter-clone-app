@@ -6,6 +6,15 @@ import '@/assets/main.scss'
 import '@/assets/variable.scss'
 
 
-createApp(App).use(store).use(router).mount('#app')
+// Global component reg.
+import LeftSidebar from "@/components/shared/sidebars/LeftSidebar.vue"
+import RightSidebar from "@/components/shared/sidebars/RightSidebar.vue"
+
+createApp(App)
+.use(store)
+.use(router)
+.component("left-sidebar",LeftSidebar)
+.component("right-sidebar",RightSidebar)
+.mount('#app')
 
 

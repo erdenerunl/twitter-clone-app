@@ -9,6 +9,10 @@ var _vueRouter = require("vue-router");
 
 var _Home = _interopRequireDefault(require("../views/Home.vue"));
 
+var _LeftSidebar = _interopRequireDefault(require("@/components/shared/sidebars/LeftSidebar.vue"));
+
+var _RightSidebar = _interopRequireDefault(require("@/components/shared/sidebars/RightSidebar.vue"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -20,13 +24,29 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var routes = [{
   path: '/',
   name: 'Home',
-  component: _Home["default"]
+  components: {
+    "default": _Home["default"],
+    LeftSidebar: _LeftSidebar["default"],
+    RightSidebar: _RightSidebar["default"]
+  }
 }, {
   path: '/profile',
   name: 'Profile',
+  component: {
+    "default": function _default() {
+      return Promise.resolve().then(function () {
+        return _interopRequireWildcard(require('../views/Profile.vue'));
+      });
+    },
+    LeftSidebar: _LeftSidebar["default"],
+    RightSidebar: _RightSidebar["default"]
+  }
+}, {
+  path: '/login',
+  name: 'Login',
   component: function component() {
     return Promise.resolve().then(function () {
-      return _interopRequireWildcard(require('../views/Profile.vue'));
+      return _interopRequireWildcard(require('../views/Login.vue'));
     });
   }
 }];
@@ -34,5 +54,5 @@ var router = (0, _vueRouter.createRouter)({
   history: (0, _vueRouter.createWebHistory)(process.env.BASE_URL),
   routes: routes
 });
-var _default = router;
-exports["default"] = _default;
+var _default2 = router;
+exports["default"] = _default2;

@@ -12,9 +12,7 @@ export default {
   components: {
     CustomText,
   },
-  props:{
-    tweet: "tweet"
-  }
+  props:["tweet"]
 };
 </script>
 

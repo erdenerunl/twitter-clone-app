@@ -15,7 +15,7 @@ export default createStore({
     initApp({commit}){
       Axios.get("http://localhost:3000/tweets").then(response => {
         commit("initApp", response.data || [])
-      })
+      }).catch(e => console.log(e))
     }
   },
   getters:{

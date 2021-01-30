@@ -5,7 +5,7 @@
       <user-info :tweet="tweet" />
     </div>
     <div class="tweet-container">
-      <tweet-container-item :tweet="tweet" />
+      <tweet-container-item :tweet="tweet"  />
     </div>
   </div>
 </template>
@@ -14,6 +14,7 @@
 import UserFigure from "./shared/UserFigure.vue";
 import UserInfo from "./shared/UserInfo.vue";
 import TweetContainerItem from "./shared/TweetContainerItem.vue";
+import { mapGetters} from "vuex";
 export default {
   components: {
     UserFigure,
@@ -21,11 +22,6 @@ export default {
     TweetContainerItem,
   },
   props:["tweet"],
-  watch:{
-      tweet(){
-          console.log(this.tweet)
-      }
-  }
 };
 </script>
 

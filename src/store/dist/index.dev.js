@@ -26,6 +26,8 @@ var _default = (0, _vuex.createStore)({
 
       _axios["default"].get("http://localhost:3000/tweets").then(function (response) {
         commit("initApp", response.data || []);
+      })["catch"](function (e) {
+        return console.log(e);
       });
     }
   },

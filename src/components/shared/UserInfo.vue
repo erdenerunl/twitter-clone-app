@@ -4,7 +4,7 @@
           {{ tweet.user }}
       </custom-text>
       <custom-text class="small text-muted">
-         {{ tweet.created_at }}
+         {{tweet.created_at}}
       </custom-text>
 
   </div>
@@ -16,9 +16,7 @@ export default {
     components:{
         CustomText
     },
-    props:{
-        tweet: "tweet"
-    }
+    props:["tweet"]
 };
 </script>
 
