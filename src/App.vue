@@ -4,9 +4,7 @@
       <div class="col-2">
         <router-view name="LeftSidebar" ></router-view>
       </div>
-      <div class="col-7 px-0 ">
         <router-view></router-view>
-      </div>
       <div class="col-3">
         <router-view name="RightSidebar" ></router-view>
       </div>
