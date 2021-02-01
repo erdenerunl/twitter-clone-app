@@ -9,6 +9,8 @@ var _vuex = require("vuex");
 
 var _axios = _interopRequireDefault(require("axios"));
 
+var _users = _interopRequireDefault(require("./modules/users.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = (0, _vuex.createStore)({
@@ -36,7 +38,9 @@ var _default = (0, _vuex.createStore)({
       return state.tweets;
     }
   },
-  modules: {}
+  modules: {
+    users: _users["default"]
+  }
 });
 
 exports["default"] = _default;

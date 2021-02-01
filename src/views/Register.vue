@@ -1,24 +1,25 @@
 <template>
-  <!-- Login Side -->
+  <!-- Register Side -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6 login-section-wrapper">
-        <div class="brand-wrapper">LOGO</div>
+        <div class="brand-wrapper">
+          <img src="@/assets/images/logo.svg" alt="logo" class="logo" />
+        </div>
         <div class="login-wrapper my-auto">
-          <h1 class="login-title">Log in</h1>
+          <h1 class="login-title">Create Account</h1>
           <form action="#!">
             <div class="form-group">
-              <label for="username">username</label>
-              <input v-model="loginData.username" type="text" name="username" id="username" class="form-control" placeholder="username..." />
+              <label for="username">Username</label>
+              <input v-model="registerData.username" type="text" name="username" id="username" class="form-control" placeholder="Choose your username" />
             </div>
             <div class="form-group mb-4">
               <label for="password">Password</label>
-              <input v-model="loginData.password" type="password" name="password" id="password" class="form-control" placeholder="enter your passsword" />
+              <input v-model="registerData.password" type="password" name="password" id="password" class="form-control" placeholder="Choose your passsword" />
             </div>
-            <input @click="onSave({...loginData})" name="login" id="login" class="btn btn-block login-btn" type="button" value="Login" />
+            <input @click="onSave({ ...registerData })" name="signup" id="signup" class="btn btn-block login-btn" type="button" value="signup" />
+            <p class="login-wrapper-footer-text">You have already an account? <router-link to="/login">Login</router-link></p>
           </form>
-          <a href="#!" class="forgot-password-link">Forgot password?</a>
-          <p class="login-wrapper-footer-text">Don't have an account? <router-link to="/register" >Register here</router-link></p>
         </div>
       </div>
       <div class="col-sm-6 px-0 d-none d-sm-block">
@@ -26,28 +27,24 @@
       </div>
     </div>
   </div>
-
-
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex';
 export default {
   data() {
     return {
-      
-      loginData: {
+      registerData: {
         username: "",
         password: "",
       },
-      
     };
   },
-  methods:{
+  methods: {
     ...mapActions({
-      onSave : 'users/login'
+        onSave : 'users/register'
     })
-  }
+  },
 };
 </script>
 

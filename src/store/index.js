@@ -1,6 +1,6 @@
-
 import { createStore } from 'vuex'
 import Axios from 'axios'
+import users from './modules/users.js'
 
 export default createStore({
   state: {
@@ -22,5 +22,6 @@ export default createStore({
     tweets: state => state.tweets
   },
   modules: {
+    users
   }
 })
