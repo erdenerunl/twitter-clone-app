@@ -4,6 +4,11 @@
       "username": "erdenerunl",
       "password": "12345",
       "id": 1
+    },
+    {
+      "username": "ozdener_unal",
+      "password": "12345",
+      "id": 2
     }
   ],
   "tweets": [

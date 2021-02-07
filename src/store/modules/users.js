@@ -32,5 +32,8 @@ export default {
         }
       })
     }
+  },
+  getters: {
+    isAuthenticated: state => state.user !== null
   }
 };

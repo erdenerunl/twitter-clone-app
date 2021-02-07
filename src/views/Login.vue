@@ -9,13 +9,13 @@
           <form action="#!">
             <div class="form-group">
               <label for="username">username</label>
-              <input v-model="loginData.username" type="text" name="username" id="username" class="form-control" placeholder="username..." />
+              <input v-model.trim="loginData.username" type="text" name="username" id="username" class="form-control" placeholder="username..." />
             </div>
             <div class="form-group mb-4">
               <label for="password">Password</label>
-              <input v-model="loginData.password" type="password" name="password" id="password" class="form-control" placeholder="enter your passsword" />
+              <input @keydown.enter="onSave({...loginData})" v-model.trim="loginData.password" type="password" name="password" id="password" class="form-control" placeholder="enter your passsword" />
             </div>
-            <input @click="onSave({...loginData})" name="login" id="login" class="btn btn-block login-btn" type="button" value="Login" />
+            <input  @click="onSave({...loginData})" name="login" id="login" class="btn btn-block login-btn" type="button" value="Login" />
           </form>
           <a href="#!" class="forgot-password-link">Forgot password?</a>
           <p class="login-wrapper-footer-text">Don't have an account? <router-link to="/register" >Register here</router-link></p>

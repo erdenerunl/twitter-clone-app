@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import store from '../store'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
@@ -38,6 +39,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = store.getters["users/isAuthenticated"];
+  if (to.name === "Home" && isAuthenticated) {
+    console.log('otantike kullanıcı', isAuthenticated );
+    next();
+  } 
+  else if (to.name === "Login" && !isAuthenticated) next();
 })
 
 export default router
